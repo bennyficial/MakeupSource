@@ -681,8 +681,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Testimonials Section
 --------------------------------*/
 #testimonials {
-  /*background: #f6f6f6;*/
-  background-image: url(../img/back2.jpg);
+  background: #f6f6f6;
   padding: 80px 0;
 }
 
