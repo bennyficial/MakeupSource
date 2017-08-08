@@ -74,20 +74,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-.videoWrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  padding-top: 25px;
-  height: 0;
-}
-.videoWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 /*--------------------------------------------------------------
 # Welcome
 --------------------------------------------------------------*/
@@ -565,6 +551,49 @@ body.mobile-nav-active #mobile-nav-toggle {
 #services .service-description {
   margin-left: 80px;
   line-height: 24px;
+}
+#new-window-container {
+  width:90%; 
+  height: 90%; 
+  display: none; 
+  position: fixed;
+  margin-top: 5%; 
+  margin-left: 5%; 
+  background:#FFF; 
+  border: 1px solid #666;
+  border: 1px solid #555;
+  box-shadow: 2px 2px 40px #222; 
+  z-index: 999999;
+}
+/*===========================*/
+/*Pop-up window CSS*/
+/*===========================*/
+#newWindow{
+  background: #000; 
+  opacity:.9;  
+  position: fixed; 
+  width: 90%; 
+  height: 90%; 
+  top:0; 
+  left:0; 
+  display:none;
+
+}
+#closebtn { 
+  top: 13px;
+  position: absolute;
+  right: 13px; 
+  padding: 10px; 
+  background: #EEE; 
+  border: 1px solid #CCC;
+}
+#closebtn:hover {
+  cursor: pointer; 
+  background: #E5E5E5 
+}
+#empli:hover {  
+  cursor: pointer; 
+  background: #E5E5E5 
 }
 
 /* Subscribe Section
