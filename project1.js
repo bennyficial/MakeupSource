@@ -228,7 +228,7 @@ $(document).on('click touch',".we",function(){
 // ajax call
 //=====================//
 function displayMakeUpfo() {
-	 queryURL = "http://makeup-api.herokuapp.com/api/v1/products.json?brand=" + brand + "&product_type=" + product;
+	 queryURL = "https://makeup-api.herokuapp.com/api/v1/products.json?brand=" + brand + "&product_type=" + product;
 	console.log(queryURL);
 	$.ajax({
 		url: queryURL,
