@@ -167,8 +167,8 @@ $(document).ready(function() {
 // })
 
 
-
-  $(".eye").on("click", function() {
+$(document).on('click touch',".eye",function(){
+  // $(".eye").on("click", function() {
   var randomEyes = Math.floor(Math.random() * vidz.eyes.length);
   console.log(randomEyes);
   // $("#player").empty();
@@ -177,8 +177,8 @@ $(document).ready(function() {
   $("#player").html(player);
 
 })
-
-  $(".face").on("click", function() {
+$(document).on('click touch',".face",function(){
+  // $(".face").on("click", function() {
   var randomFace = Math.floor(Math.random() * vidz.face.length);
   console.log(randomFace);
   // $("#player").empty();
@@ -187,8 +187,8 @@ $(document).ready(function() {
   $("#player").html(player);
 
 })
-
-$(".lip").on("click", function() {
+$(document).on('click touch',".lip",function(){
+// $(".lip").on("click", function() {
   var randomLips = Math.floor(Math.random() * vidz.lips.length);
   console.log(randomLips);
   // $("#player").empty();
@@ -197,8 +197,8 @@ $(".lip").on("click", function() {
   $("#player").html(player);
 
 })
-
-$(".acc").on("click", function() {
+$(document).on('click touch',".acc",function(){
+// $(".acc").on("click", function() {
   var randomAccessories = Math.floor(Math.random() * vidz.accessory.length);
   console.log(randomAccessories);
   // $("#player").empty();
