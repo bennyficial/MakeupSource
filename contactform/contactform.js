@@ -32,10 +32,10 @@
     var instaQuote2 = response.items[random+1].caption.text;
 
     $('#insta1').html('<img src="'+instaImage+'">');
-    $('#insta1Quote').html('<b><img src="quote_sign_left.png">  <small>'+instaQuote+'</small><b><img src="quote_sign_right.png">');
+    $('#insta1Quote').html('<b><img src="img/quote_sign_left.png">  <small>'+instaQuote+'</small><b><img src="img/quote_sign_right.png">');
 
     $('#insta2').html('<img src="'+instaImage2+'">');
-    $('#insta2Quote').html('<b><img src="quote_sign_left.png">  <small>'+instaQuote2+'</small><b><img src="quote_sign_right.png">');
+    $('#insta2Quote').html('<b><img src="img/quote_sign_left.png">  <small>'+instaQuote2+'</small><b><img src="img/quote_sign_right.png">');
 
   });  
 
