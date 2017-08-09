@@ -191,7 +191,7 @@ $(document).ready(function() {
     starter: ['w6wFUHPpOJ8', '9sfdPfojPmY']
   }
 
- 
+
 
   $(".eye").on("click", function() {
   var randomEyes = Math.floor(Math.random() * vidz.eyes.length);
@@ -200,17 +200,17 @@ $(document).ready(function() {
   var vidzID = vidz.eyes[0];
   var player = $("<iframe id='ytplayer' type ='text/html' width='600' height='400' src='https://www.youtube.com/embed/" + vidzID + "?autoplay=0' frameborder='0' allowfullscreen>")
   $("#player").html(player);
-  
-}) 
+
+})
 
   $(".face").on("click", function() {
   var randomFace = Math.floor(Math.random() * vidz.face.length);
   console.log(randomFace);
-  // $("#player").empty();  
+  // $("#player").empty();
   var vidzID = vidz.face[0];
   var player = $("<iframe id='ytplayer' type ='text/html' width='600' height='400' src='https://www.youtube.com/embed/" + vidzID + "?autoplay=0' frameborder='0' allowfullscreen>")
   $("#player").html(player);
-  
+
 })
 
 $(".lip").on("click", function() {
@@ -220,5 +220,63 @@ $(".lip").on("click", function() {
   var vidzID = vidz.lips[randomLips];
   var player = $("<iframe id='ytplayer' type ='text/html' width='600' height='400' src='https://www.youtube.com/embed/" + vidzID + "?autoplay=0' frameborder='0' allowfullscreen>")
   $("#player").html(player);
-  
+
 })
+// =====================//
+// click function
+//=====================//
+$(document).on('click',".brand",function(){
+	event.preventDefault();
+	// brand = $('#brand-input').val().trim();
+	brand = $(this).attr('data-brand');
+	product = $(this).attr('data-products');
+	console.log($(this).attr('data-brand'));
+	console.log($(this).attr('data-products'));
+	brands.push(brand);
+	displayMakeUpfo();
+  console.log(brand);
+  console.log(product);
+});
+// =====================//
+// ajax call
+//=====================//
+function displayMakeUpfo() {
+
+	queryURL = "http://makeup-api.herokuapp.com/api/v1/products.json?brand=" + brand + "&product_type=" + product;
+	console.log(queryURL);
+	$.ajax({
+		url: queryURL,
+		method: "GET"
+	}).done(function(response){
+		var results = response
+		console.log(results);
+		for (var i = 0; i < results.length; i++) {
+			var productDiv = $("<div id='results' class='col-sm-4'>");
+			// console.log(productDiv);
+			var productName = results[i].name;
+			// console.log(productName);
+			var pName = $("<div id='product-name'>").text(productName);
+			// console.log(pName);
+			var price = results[i].price;
+			var p = $("<p>").text("Price:" + price);
+			var productImage = $("<img>");
+			var staticSrc = results[i].image_link;
+			var webLink = results[i].product_link;
+			productImage.attr("src",staticSrc);
+			productImage.addClass("product");
+			productImage.attr("href",webLink);
+			console.log(webLink);
+			productDiv.append(pName);
+			// console.log(productDiv.append(pName));
+			productDiv.append(productImage);
+			productDiv.append(p);
+			$("#newWindow").prepend(productDiv); // we prepend so that the rest of the divs fall in place after
+			// $("#results").wrap($('<a target="_blank">',{   // look into wrap and how it works
+   // 				href: webLink
+			// }));
+			$("#results").wrap($("<a target='_blank'>").attr("href", webLink));
+			$(document).ready(function(){
+		    	$(".product").click(function(){
+		        	$(this).attr("href");
+		    	});
+			});
