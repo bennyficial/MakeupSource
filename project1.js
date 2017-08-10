@@ -253,7 +253,7 @@ function displayMakeUpfo() {
 			productDiv.append(p);
 			$("#newWindow").prepend(productDiv); // we prepend so that the rest of the divs fall in place after
 			$("#results").wrap($('<a target="_blank">').attr("href", webLink));
-
+			
 			$(document).ready(function(){
 		    	$(".product").click(function(){
 		        	$(this).attr("href");
