@@ -3,7 +3,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  background: #f7f7f7;
+  background: #fff;
   color: #666666;
   font-family: "Open Sans", sans-serif;
 }
@@ -30,9 +30,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px 0;
   padding: 0;
 }
-#newWindow{z-index: 999;
-
-margin-top: 20px;}
+#newWindow{z-index: 999;}
 /* Preloader */
 #preloader {
   position: fixed;
@@ -564,14 +562,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #services .service-description {
-  margin-left: 80px;
+  margin-left: 40px;
   line-height: 24px;
 }
 
 /* About Us Section
 --------------------------------*/
 #subscribe {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/background3.jpg) fixed center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../img/background3.jpg) fixed center center;
   background-size: cover;
   padding: 80px 0;
 }
@@ -617,7 +615,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Whats Hot Section
 --------------------------------*/
 #portfolio {
-  background: #f7f7f7;
+  background: #fff;
   padding: 80px 0;
 }
 
@@ -742,7 +740,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Influencers Section
 --------------------------------*/
 #team {
-  background: #f7f7f7;
+  background: #fff;
   padding: 80px 0 60px 0;
 }
 
