@@ -63,6 +63,8 @@ $(document).on('click touch',".we",function(){
   console.log(brand);
   console.log(product);
   $("#newWindow").empty();
+  $("body").removeClass();
+  $("#mobile-body-overly").css("display", "none");
 });
 // =====================//
 // ajax call
