@@ -6,6 +6,11 @@ body {
   background: #f7f7f7;
   color: #666666;
   font-family: "Open Sans", sans-serif;
+  
+}
+
+#win { overflow-x:hidden
+
 }
 
 a {
