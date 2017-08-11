@@ -52,7 +52,7 @@
   Header Nav Bar Section
 ============================-->
   <header id="header">
-    <div class="container">
+    <div class="container"><!--  why is this here again? -->
 
       <div id="logo" class="pull-left">
         <a href="#hero"><img src="img/ms1.png" alt="" title="" /></img></a>
@@ -137,11 +137,50 @@
     </ul>
 </li>
       </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+            <li><p id="LoginInstructions" class="navbar-text">Already have an account?</p></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+      <ul id="login-dp" class="dropdown-menu">
+        <li>
+           <div class="row">
+              <div class="col-md-12">
+              <div id="signUpAlert" class="top text-center">
+                Login Area
+              </div>
+                 <form class="form " role="form" id="login-nav">
+                    <div class="form-group">
+                       <input type="email" class="form-control loginForm" id="txtEmail" placeholder="Email address" required>
+                    </div>
+                    <div class="form-group">
+                       <input type="password" class="form-control loginForm" id="txtPassword" placeholder="Password" required>
+                        <div class="help-block text-right loginForm"><a>Forget the password ?</a></div>
+                    </div>
+                    <div class="form-group">
+                       <button type="btnLogin" id="btnLogin" class="btn btn-primary btn-block">Log In</button>
+                       <button type="btnLogOut" id="btnLogOut" class="btn btn-warning btn-block hide">Log Out</button> 
+                    </div>
+                    <div class="checkbox loginForm">
+                       <label>
+                       <input type="checkbox"> keep me logged-in
+                       </label>
+                    </div>
+                 </form>
+              </div>
+              <div class="bottom text-center loginForm">
+                New here ? <button id="btnSignUp" class="btn btn-sm btn-success">Sign Up</button> 
+              </div>
+           </div>
+        </li>
+      </ul>
+        </li>
+      </ul>       
       </nav><!-- #nav-menu-container -->
     </div>
   </header><!-- #header -->
 
-      <div id="newWindow"></div>
+      <div class="text-center" id="newWindow"></div>
 
     
 <!--==========================
@@ -323,21 +362,24 @@
       </div>
 
       <div class="row">
-        <div class="col-md-3">
-          <div class="profile">
-            <div class="pic">
-              <div id="insta1"></div>
-            </div>
-            <h4></h4>
-          </div>
-        </div>
-        <div class="col-md-9">
-          <div class="quote">
-            <div id="insta1Quote">
-          </div>
-        </div>
-      </div>
 
+        <div class="row"> 
+          <div class="col-md-3">
+            <div class="profile">
+              <div class="pic">
+                <div id="insta1"></div>
+              </div>
+              <h4></h4>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="quote">
+              <div id="insta1Quote">
+            </div>
+          </div>
+        </div>
+      </div>  
+      
       <div class="row">
         <div class="col-md-9">
           <div class="quote">
@@ -347,11 +389,10 @@
         <div class="col-md-3">
           <div class="profile">
             <div class="pic"><div id="insta2"></div></div>
-
           </div>
         </div>
       </div>
-
+      
     </div>
   </section>
 
@@ -478,14 +519,12 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-xs-4 col-xs-push-2">
+       <div class="row">
+          <div class="col-md-5 col-md-push-2">
             <div id="uploadMessage"></div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-4 col-xs-2">
-            <div id="uploadButton"></div>
+          <div class="col-md-5 col-md-push-3">  
+           <div id="uploadButton"></div>
           </div>
         </div>
 
@@ -524,9 +563,7 @@
   <!-- Template Specisifc Custom Javascript File -->
   <script src="js/custom.js"></script>
 
-  <script src="contactform/contactform.js"></script>
-
-  <script src="project1.js"></script>
+  <script src="js/project1.js"></script>
 
 </body>
 </html>
