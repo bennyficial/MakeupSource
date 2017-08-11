@@ -3,7 +3,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  background: #fff;
+  background: #f7f7f7;
   color: #666666;
   font-family: "Open Sans", sans-serif;
 }
@@ -30,7 +30,9 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px 0;
   padding: 0;
 }
-#newWindow{z-index: 999;}
+#newWindow{z-index: 999;
+margin-top: 20px;
+}
 /* Preloader */
 #preloader {
   position: fixed;
@@ -531,7 +533,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #services .service-icon {
   float: left;
   background: #03C4EB;
-  padding: 16px;
+  padding: 32px;
   border-radius: 50%;
   transition: 0.5s;
   border: 1px solid #03C4EB;
@@ -551,8 +553,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #services .service-title {
-  margin-left: 80px;
   font-weight: 700;
+  margin-top: 10px;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
@@ -562,7 +564,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #services .service-description {
-  margin-left: 40px;
   line-height: 24px;
 }
 
